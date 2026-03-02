@@ -1,0 +1,48 @@
+<mujoco model="d1_kinematics">
+  <compiler angle="radian" autolimits="true"/>
+
+  <worldbody>
+    <body name="Link1" pos="0 0 0.0533" quat="-3.67321e-06 0 0 -1">
+      <inertial pos="0 0 0" mass="1.0" diaginertia="0.01 0.01 0.01"/>
+      <joint name="Joint1" pos="0 0 0" axis="0 0 1" range="-2.35 2.35"/>
+      
+      <body name="Link2" pos="0 0.028 0.0563" quat="-2.59734e-06 -2.59735e-06 -0.707108 -0.707105">
+        <inertial pos="0 0 0" mass="1.0" diaginertia="0.01 0.01 0.01"/>
+        <joint name="Joint2" pos="0 0 0" axis="0 0 -1" range="-1.57 1.57"/>
+        
+        <body name="Link3" pos="0 0.2693 0.0009">
+          <inertial pos="0 0 0" mass="1.0" diaginertia="0.01 0.01 0.01"/>
+          <joint name="Joint3" pos="0 0 0" axis="0 0 -1" range="-1.57 1.57"/>
+          
+          <body name="Link4" pos="0.0577 0.042 -0.0275" quat="0.499998 -0.5 0.500002 -0.5">
+            <inertial pos="0 0 0" mass="1.0" diaginertia="0.01 0.01 0.01"/>
+            <joint name="Joint4" pos="0 0 0" axis="0 0 1" range="-2.35 2.35"/>
+            
+            <body name="Link5" pos="-0.0001 -0.0237 0.14018" quat="0.499998 0.5 -0.5 0.500002">
+              <inertial pos="0 0 0" mass="1.0" diaginertia="0.01 0.01 0.01"/>
+              <joint name="Joint5" pos="0 0 0" axis="0 0 -1" range="-1.57 1.57"/>
+              
+              <body name="Link6" pos="0.0825 -0.0010782 -0.023822" quat="0.499998 -0.5 0.500002 -0.5">
+                <inertial pos="0 0 0" mass="1.0" diaginertia="0.01 0.01 0.01"/>
+                <joint name="Joint6" pos="0 0 0" axis="0 0 -1" range="-2.35 2.35"/>
+                
+                <site name="end_effector" pos="0 0 0.0706" size="0.01"/>
+
+                <body name="Link7_1" pos="-0.0056012 -0.029636 0.0706" quat="0.499848 -0.50015 -0.49985 -0.500152">
+                  <inertial pos="0 0 0" mass="0.1" diaginertia="0.001 0.001 0.001"/>
+                  <joint name="Joint7_1" pos="0 0 0" axis="0 0 -1" type="slide" range="0 0.03"/>
+                </body>
+                
+                <body name="Link7_2" pos="-0.0056388 0.02964 0.0706" quat="0.500148 0.49985 -0.50015 0.499852">
+                  <inertial pos="0 0 0" mass="0.1" diaginertia="0.001 0.001 0.001"/>
+                  <joint name="Joint7_2" pos="0 0 0" axis="0 0 1" type="slide" range="-0.03 0"/>
+                </body>
+                
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>
